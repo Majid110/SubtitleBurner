@@ -1,0 +1,109 @@
+﻿<Window x:Class="SubtitleBurner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:resx="clr-namespace:SubtitleBurner.Properties"
+        xmlns:loc="clr-namespace:SubtitleBurner"
+        loc:Translation.ResourceManager="{x:Static resx:Resources.ResourceManager}"
+        mc:Ignorable="d"
+        Title="Subtitle Burner"
+        Height="250"
+        Width="600"
+        TextElement.FontFamily="{StaticResource Shabnam}"
+        FontFamily="{StaticResource Shabnam}"
+        FontSize="14"
+        Background="WhiteSmoke"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize">
+  <Window.Resources>
+    <Style TargetType="Button">
+      <Setter Property="Margin"
+              Value="5" />
+    </Style>
+    <Style TargetType="TextBox">
+      <Setter Property="Margin"
+              Value="5" />
+      <Setter Property="FlowDirection"
+              Value="LeftToRight" />
+      <Setter Property="Padding"
+              Value="5" />
+
+    </Style>
+    <Style x:Key="languageButton"
+           TargetType="Button">
+      <Setter Property="Width"
+              Value="20" />
+      <Setter Property="Height"
+              Value="20" />
+      <Setter Property="Margin"
+              Value="2" />
+      <Setter Property="FontSize"
+              Value="10" />
+    </Style>
+  </Window.Resources>
+  <StackPanel Margin="10,20,10,5" VerticalAlignment="Bottom">
+  <Grid Width="500"
+        Height="130"
+        Margin="0,0,0,10">
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+      <RowDefinition />
+
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="20*" />
+      <ColumnDefinition Width="80*" />
+      <ColumnDefinition Width="10*" />
+    </Grid.ColumnDefinitions>
+    <Label Content="{loc:Loc VideoLabel}"
+           VerticalAlignment="Center"
+           Grid.Row="0"
+           Grid.Column="0" />
+    <TextBox x:Name="txtVideo"
+             AllowDrop="True"
+             PreviewDragOver="Txt_PreviewDragOver"
+             PreviewDrop="Txt_PreviewDrop"
+             Grid.Row="0"
+             Grid.Column="1" />
+    <Button x:Name="btnSelectVideo"
+            Content="..."
+            ToolTip="{loc:Loc VideoSelectToolTip}"
+            Click="BtnSelectVideo_Click"
+            Grid.Row="0"
+            Grid.Column="2" />
+
+    <Label Content="{loc:Loc SubtitleLabel}"
+           VerticalAlignment="Center"
+           Grid.Row="1"
+           Grid.Column="0" />
+    <TextBox x:Name="txtSubtitle"
+             AllowDrop="True"
+             PreviewDragOver="Txt_PreviewDragOver"
+             PreviewDrop="Txt_PreviewDrop"             
+             Grid.Row="1"
+             Grid.Column="1" />
+    <Button x:Name="btnSelectSubtitle"
+            Content="..."
+            ToolTip="{loc:Loc SubtitleSelectToolTip}"
+            Click="BtnSelectSubtitle_Click"
+            Grid.Row="1"
+            Grid.Column="2" />
+
+    <Button x:Name="btnMakeOutput"
+            Content="{loc:Loc BurnButtonCaption}"
+            Click="BtnMakeOutput_Click"
+            Grid.Row="2"
+            Grid.Column="1" />
+
+  </Grid>
+    <StackPanel Orientation="Horizontal">
+      <Button x:Name="BtnFaCulture" Click="BtnFaCulture_Click" Content="FA"
+              Style="{StaticResource languageButton}"/>
+      <Button x:Name="BtnEnCulture" Click="BtnEnCulture_Click" Content="EN"
+              Style="{StaticResource languageButton}" />
+    </StackPanel>
+  </StackPanel>
+</Window>

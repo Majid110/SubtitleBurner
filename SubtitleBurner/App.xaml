@@ -1,0 +1,10 @@
+﻿<Application x:Class="SubtitleBurner.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+    <ResourceDictionary>
+      <FontFamily x:Key="Shabnam">pack://application:,,,/Fonts/#Shabnam</FontFamily>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>
