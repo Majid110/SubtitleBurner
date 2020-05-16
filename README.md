@@ -1,7 +1,7 @@
 # SubtitleBurner
-Burn Aegisub Advanced Subtitle (.ass) to video
+Burn Aegisub Advanced Substation Alpha subtitle (.ass) to video
 
-This tools uses [ffmpeg](https://ffmpeg.org/) to burn [Aegisub](http://www.aegisub.org/) Advanced Subtitle (.ass) subtitle to your video
+This tools uses [ffmpeg](https://ffmpeg.org/) to burn [Aegisub](http://www.aegisub.org/) Advanced Substation Alpha subtitle (.ass) subtitle to your video
 
 ![Subtitle Burner](images/subtitle_burner_en.png)
 
