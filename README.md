@@ -1,5 +1,5 @@
 # SubtitleBurner
-Burn Aegisub Advanced Substation Alpha subtitle (.ass) to video
+Hardcode Aegisub Advanced Substation Alpha subtitle (.ass) to video
 
 This tools uses [ffmpeg](https://ffmpeg.org/) to burn [Aegisub](http://www.aegisub.org/) Advanced Substation Alpha subtitle (.ass) subtitle to your video
 
@@ -9,8 +9,8 @@ This tools uses [ffmpeg](https://ffmpeg.org/) to burn [Aegisub](http://www.aegis
 <br />
 <div dir="rtl">
 
-نرم‌افزار ثبت زیرنویس‌های ایجاد شده با نرم‌افزار 
-[Aegisub](http://www.aegisub.org/)
+نرم‌افزار درج زیرنویس‌های ایجاد شده با نرم‌افزار 
+[Aegisub](http://www.aegisub.org/) - Advanced Substation Alpha subtitle (.ass) 
  بر روی ویدئو بوسیله کتابخانه 
  [ffmpeg](https://ffmpeg.org/)
 
