@@ -9,8 +9,10 @@ This tools uses [ffmpeg](https://ffmpeg.org/) to burn [Aegisub](http://www.aegis
 <br />
 <div dir="rtl">
 
-نرم‌افزار درج زیرنویس‌های ایجاد شده با نرم‌افزار 
-[Aegisub](http://www.aegisub.org/) - Advanced Substation Alpha subtitle (.ass) 
+نرم‌افزار درج زیرنویس‌های
+ Advanced Substation Alpha subtitle (.ass) 
+ایجاد شده با نرم‌افزار 
+[Aegisub](http://www.aegisub.org/) 
  بر روی ویدئو بوسیله کتابخانه 
  [ffmpeg](https://ffmpeg.org/)
 
