@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
@@ -59,14 +60,18 @@ namespace SubtitleBurner
 
       if (string.IsNullOrEmpty(txtSubtitle.Text))
       {
-        MessageBox.Show(Utils.GetResourceText("NoSubtitleWarning"), Utils.GetResourceText("WarningTitle"), MessageBoxButton.OK, MessageBoxImage.Warning);
-        return;
+        if (comboScale.SelectedIndex == 0)
+        {
+          MessageBox.Show(Utils.GetResourceText("NoSubtitleWarning"), Utils.GetResourceText("WarningTitle"), MessageBoxButton.OK, MessageBoxImage.Warning);
+          return;
+        }
       }
 
       var video = txtVideo.Text;
       var subtitle = txtSubtitle.Text;
+      var scale = extractScale(comboScale.Text);
       string output;
-      var result = new Burner().StartBurning(video, subtitle, out output);
+      var result = new Burner().StartBurning(video, subtitle, scale, out output);
       if (result)
       {
         MessageBox.Show(Utils.GetResourceText("CompletedMessage"), Utils.GetResourceText("InformationTitle"), MessageBoxButton.OK, MessageBoxImage.Information);
@@ -106,6 +111,12 @@ namespace SubtitleBurner
     {
       Process.Start(Application.ResourceAssembly.Location);
       Application.Current.Shutdown();
+    }
+
+    private string extractScale(string text)
+    {
+      var match = Regex.Match(text, @"^\d+:\d+", RegexOptions.IgnoreCase);
+      return match.Success ? match.Value : "";
     }
   }
 }

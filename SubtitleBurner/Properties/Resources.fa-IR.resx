@@ -132,6 +132,9 @@
   <data name="InformationTitle" xml:space="preserve">
     <value>اطلاعات</value>
   </data>
+  <data name="NoChange" xml:space="preserve">
+    <value>بدون تغییر</value>
+  </data>
   <data name="NoSubtitleWarning" xml:space="preserve">
     <value>فایل زیرنویس انتخاب نشده</value>
   </data>
@@ -143,6 +146,9 @@
   </data>
   <data name="QuestionTitle" xml:space="preserve">
     <value>سوال</value>
+  </data>
+  <data name="ScaleLabel" xml:space="preserve">
+    <value>اندازه خروجی</value>
   </data>
   <data name="SubtitleLabel" xml:space="preserve">
     <value>زیرنویس</value>

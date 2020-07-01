@@ -106,6 +106,15 @@ namespace SubtitleBurner.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Change.
+        /// </summary>
+        public static string NoChange {
+            get {
+                return ResourceManager.GetString("NoChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Subtitle file is not selected.
         /// </summary>
         public static string NoSubtitleWarning {
@@ -138,6 +147,15 @@ namespace SubtitleBurner.Properties {
         public static string QuestionTitle {
             get {
                 return ResourceManager.GetString("QuestionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output Scale.
+        /// </summary>
+        public static string ScaleLabel {
+            get {
+                return ResourceManager.GetString("ScaleLabel", resourceCulture);
             }
         }
         

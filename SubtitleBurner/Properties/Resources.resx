@@ -132,6 +132,9 @@
   <data name="InformationTitle" xml:space="preserve">
     <value>Information</value>
   </data>
+  <data name="NoChange" xml:space="preserve">
+    <value>No Change</value>
+  </data>
   <data name="NoSubtitleWarning" xml:space="preserve">
     <value>Subtitle file is not selected</value>
   </data>
@@ -143,6 +146,9 @@
   </data>
   <data name="QuestionTitle" xml:space="preserve">
     <value>Question</value>
+  </data>
+  <data name="ScaleLabel" xml:space="preserve">
+    <value>Output Scale</value>
   </data>
   <data name="SubtitleLabel" xml:space="preserve">
     <value>Subtitle</value>

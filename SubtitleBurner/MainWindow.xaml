@@ -8,7 +8,7 @@
         loc:Translation.ResourceManager="{x:Static resx:Resources.ResourceManager}"
         mc:Ignorable="d"
         Title="Subtitle Burner"
-        Height="250"
+        Height="270"
         Width="600"
         TextElement.FontFamily="{StaticResource Shabnam}"
         FontFamily="{StaticResource Shabnam}"
@@ -43,66 +43,96 @@
               Value="10" />
     </Style>
   </Window.Resources>
-  <StackPanel Margin="10,20,10,5" VerticalAlignment="Bottom">
-  <Grid Width="500"
-        Height="130"
-        Margin="0,0,0,10">
-    <Grid.RowDefinitions>
-      <RowDefinition />
-      <RowDefinition />
-      <RowDefinition />
+  <StackPanel Margin="10,20,10,5"
+              VerticalAlignment="Bottom">
+    <Grid Width="500"
+          Height="160"
+          Margin="0,0,0,10">
+      <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
 
-    </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="20*" />
-      <ColumnDefinition Width="80*" />
-      <ColumnDefinition Width="10*" />
-    </Grid.ColumnDefinitions>
-    <Label Content="{loc:Loc VideoLabel}"
-           VerticalAlignment="Center"
-           Grid.Row="0"
-           Grid.Column="0" />
-    <TextBox x:Name="txtVideo"
-             AllowDrop="True"
-             PreviewDragOver="Txt_PreviewDragOver"
-             PreviewDrop="Txt_PreviewDrop"
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="20*" />
+        <ColumnDefinition Width="80*" />
+        <ColumnDefinition Width="10*" />
+      </Grid.ColumnDefinitions>
+      <Label Content="{loc:Loc VideoLabel}"
+             VerticalAlignment="Center"
              Grid.Row="0"
-             Grid.Column="1" />
-    <Button x:Name="btnSelectVideo"
-            Content="..."
-            ToolTip="{loc:Loc VideoSelectToolTip}"
-            Click="BtnSelectVideo_Click"
-            Grid.Row="0"
-            Grid.Column="2" />
+             Grid.Column="0" />
+      <TextBox x:Name="txtVideo"
+               AllowDrop="True"
+               PreviewDragOver="Txt_PreviewDragOver"
+               PreviewDrop="Txt_PreviewDrop"
+               Grid.Row="0"
+               Grid.Column="1" />
+      <Button x:Name="btnSelectVideo"
+              Content="..."
+              ToolTip="{loc:Loc VideoSelectToolTip}"
+              Click="BtnSelectVideo_Click"
+              Grid.Row="0"
+              Grid.Column="2" />
 
-    <Label Content="{loc:Loc SubtitleLabel}"
-           VerticalAlignment="Center"
-           Grid.Row="1"
-           Grid.Column="0" />
-    <TextBox x:Name="txtSubtitle"
-             AllowDrop="True"
-             PreviewDragOver="Txt_PreviewDragOver"
-             PreviewDrop="Txt_PreviewDrop"             
+      <Label Content="{loc:Loc SubtitleLabel}"
+             VerticalAlignment="Center"
              Grid.Row="1"
-             Grid.Column="1" />
-    <Button x:Name="btnSelectSubtitle"
-            Content="..."
-            ToolTip="{loc:Loc SubtitleSelectToolTip}"
-            Click="BtnSelectSubtitle_Click"
-            Grid.Row="1"
-            Grid.Column="2" />
+             Grid.Column="0" />
+      <TextBox x:Name="txtSubtitle"
+               AllowDrop="True"
+               PreviewDragOver="Txt_PreviewDragOver"
+               PreviewDrop="Txt_PreviewDrop"
+               Grid.Row="1"
+               Grid.Column="1" />
+      <Button x:Name="btnSelectSubtitle"
+              Content="..."
+              ToolTip="{loc:Loc SubtitleSelectToolTip}"
+              Click="BtnSelectSubtitle_Click"
+              Grid.Row="1"
+              Grid.Column="2" />
 
-    <Button x:Name="btnMakeOutput"
-            Content="{loc:Loc BurnButtonCaption}"
-            Click="BtnMakeOutput_Click"
-            Grid.Row="2"
-            Grid.Column="1" />
+      <Label Content="{loc:Loc ScaleLabel}"
+             VerticalAlignment="Center"
+             Grid.Row="2"
+             Grid.Column="0" />
 
-  </Grid>
+      <ComboBox x:Name="comboScale"
+                Margin="5"
+                FlowDirection="LeftToRight"
+                VerticalContentAlignment="Center"
+                Grid.Row="2"
+                Grid.Column="1">
+        <ComboBoxItem IsSelected="True"
+                      Content="{loc:Loc NoChange}"></ComboBoxItem>
+        <ComboBoxItem>640:480 (SD fullscreen)</ComboBoxItem>
+        <ComboBoxItem>704:480 (SD anamorphic)</ComboBoxItem>
+        <ComboBoxItem>640:360 (SD widescreen)</ComboBoxItem>
+        <ComboBoxItem>704:396 (SD widescreen)</ComboBoxItem>
+        <ComboBoxItem>640:352 (SD widescreen MOD16)</ComboBoxItem>
+        <ComboBoxItem>704:400 (SD widescreen MOD16)</ComboBoxItem>
+        <ComboBoxItem>1280:720 (HD 720p)</ComboBoxItem>
+        <ComboBoxItem>1920:1080 (HD 1080p)</ComboBoxItem>
+        <ComboBoxItem>1024:576 (SuperPAL widescreen)</ComboBoxItem>
+      </ComboBox>
+
+      <Button x:Name="btnMakeOutput"
+              Content="{loc:Loc BurnButtonCaption}"
+              Click="BtnMakeOutput_Click"
+              Grid.Row="3"
+              Grid.Column="1" />
+
+    </Grid>
     <StackPanel Orientation="Horizontal">
-      <Button x:Name="BtnFaCulture" Click="BtnFaCulture_Click" Content="FA"
-              Style="{StaticResource languageButton}"/>
-      <Button x:Name="BtnEnCulture" Click="BtnEnCulture_Click" Content="EN"
+      <Button x:Name="BtnFaCulture"
+              Click="BtnFaCulture_Click"
+              Content="FA"
+              Style="{StaticResource languageButton}" />
+      <Button x:Name="BtnEnCulture"
+              Click="BtnEnCulture_Click"
+              Content="EN"
               Style="{StaticResource languageButton}" />
     </StackPanel>
   </StackPanel>
